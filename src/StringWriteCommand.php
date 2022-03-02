@@ -10,7 +10,6 @@ use Symfony\Component\Console\Input\InputOption;
 
 class StringWriteCommand extends Command
 {
-
     protected static $defaultName = 'app:create-user';
 
     protected function configure()
@@ -25,11 +24,9 @@ class StringWriteCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output) : int
     {
-
         for ($i = 0; $i < $input->getOption('opt'); $i++) {
 
             $output->writeln($input->getArgument('str'));
-
         }
 
         return Command::SUCCESS;
