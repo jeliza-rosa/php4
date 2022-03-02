@@ -9,7 +9,6 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class HiCommand extends Command
 {
-
     protected static $defaultName = 'app:create-user';
 
     protected function configure()
@@ -23,7 +22,6 @@ class HiCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output) : int
     {
-
         $output->writeln('Привет, ' . $input->getArgument('str'));
 
         return Command::SUCCESS;
