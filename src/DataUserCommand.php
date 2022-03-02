@@ -11,7 +11,6 @@ use Symfony\Component\Console\Question\ChoiceQuestion;
 
 class DataUserCommand extends Command
 {
-
     protected static $defaultName = 'app:create-user';
 
     protected function configure()
@@ -24,7 +23,6 @@ class DataUserCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output) : int
     {
-
         $helper = $this->getHelper('question');
 
         $questionName = new Question('Введите ваше имя: ');
