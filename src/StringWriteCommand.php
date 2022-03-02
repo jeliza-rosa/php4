@@ -19,12 +19,11 @@ class StringWriteCommand extends Command
         ->setName('output_string')
         ->setDescription('output string')
         ->addArgument('str', InputArgument::REQUIRED, 'desc')
-        ->addOption('opt', null, InputOption::VALUE_REQUIRED, 'desc', 2
-    )
+        ->addOption('opt', null, InputOption::VALUE_REQUIRED, 'desc', 2)
         ;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output) : int
     {
 
         for ($i = 0; $i < $input->getOption('opt'); $i++) {
@@ -33,6 +32,6 @@ class StringWriteCommand extends Command
 
         }
 
-        return 1;
+        return Command::SUCCESS;
     }
 }
