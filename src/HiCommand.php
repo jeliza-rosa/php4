@@ -21,11 +21,11 @@ class HiCommand extends Command
         ;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output) : int
     {
 
         $output->writeln('Привет, ' . $input->getArgument('str'));
 
-        return 1;
+        return Command::SUCCESS;
     }
 }
