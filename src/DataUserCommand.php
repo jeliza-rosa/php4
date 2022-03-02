@@ -22,7 +22,7 @@ class DataUserCommand extends Command
         ;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output) : int
     {
 
         $helper = $this->getHelper('question');
@@ -37,6 +37,6 @@ class DataUserCommand extends Command
 
         $output->writeln('Здравствуйте, ' . $name . '. Ваш возраст: ' . $age . '. Ваш пол: ' . $male);
 
-        return 1;
+        return Command::SUCCESS;
     }
 }
